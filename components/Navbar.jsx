@@ -47,7 +47,7 @@ const Navbar = () => {
             </UserButton.MenuItems>
           </UserButton>
           </>
-          :<button onClick={openSignIn} className="flex items-center gap-2 hover:text-gray-900 transition">
+          : <button onClick={openSignIn} className="flex items-center gap-2 hover:text-gray-900 transition">
             <Image src={assets.user_icon} alt="user icon" />
             Account
           </button>
@@ -61,8 +61,14 @@ const Navbar = () => {
           <UserButton>
             <UserButton.MenuItems>
               <UserButton.Action label="Home" labelIcon={<HomeIcon/>} onClick={() => router.push('/')} />
+            </UserButton.MenuItems>
+            <UserButton.MenuItems>
               <UserButton.Action label="Products" labelIcon={<BoxIcon/>} onClick={() => router.push('/all-products')} />
+            </UserButton.MenuItems>
+            <UserButton.MenuItems>
               <UserButton.Action label="Cart" labelIcon={<CartIcon/>} onClick={() => router.push('/cart')} />
+            </UserButton.MenuItems>
+            <UserButton.MenuItems>
               <UserButton.Action label="My Orders" labelIcon={<BagIcon/>} onClick={() => router.push('/my-orders')} />
             </UserButton.MenuItems>
           </UserButton>
